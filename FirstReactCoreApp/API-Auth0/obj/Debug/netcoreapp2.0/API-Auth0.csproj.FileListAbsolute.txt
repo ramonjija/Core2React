@@ -1,0 +1,10 @@
+C:\Users\ramon.silva\Documents\GitHub\Core2React\FirstReactCoreApp\API-Auth0\obj\Debug\netcoreapp2.0\API-Auth0.csproj.CoreCompileInputs.cache
+C:\Users\ramon.silva\Documents\GitHub\Core2React\FirstReactCoreApp\API-Auth0\obj\Debug\netcoreapp2.0\API-Auth0.AssemblyInfoInputs.cache
+C:\Users\ramon.silva\Documents\GitHub\Core2React\FirstReactCoreApp\API-Auth0\obj\Debug\netcoreapp2.0\API-Auth0.AssemblyInfo.cs
+C:\Users\ramon.silva\Documents\GitHub\Core2React\FirstReactCoreApp\API-Auth0\bin\Debug\netcoreapp2.0\API-Auth0.deps.json
+C:\Users\ramon.silva\Documents\GitHub\Core2React\FirstReactCoreApp\API-Auth0\bin\Debug\netcoreapp2.0\API-Auth0.runtimeconfig.json
+C:\Users\ramon.silva\Documents\GitHub\Core2React\FirstReactCoreApp\API-Auth0\bin\Debug\netcoreapp2.0\API-Auth0.runtimeconfig.dev.json
+C:\Users\ramon.silva\Documents\GitHub\Core2React\FirstReactCoreApp\API-Auth0\bin\Debug\netcoreapp2.0\API-Auth0.dll
+C:\Users\ramon.silva\Documents\GitHub\Core2React\FirstReactCoreApp\API-Auth0\bin\Debug\netcoreapp2.0\API-Auth0.pdb
+C:\Users\ramon.silva\Documents\GitHub\Core2React\FirstReactCoreApp\API-Auth0\obj\Debug\netcoreapp2.0\API-Auth0.dll
+C:\Users\ramon.silva\Documents\GitHub\Core2React\FirstReactCoreApp\API-Auth0\obj\Debug\netcoreapp2.0\API-Auth0.pdb
