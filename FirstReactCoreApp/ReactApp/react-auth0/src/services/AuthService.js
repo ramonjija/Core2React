@@ -38,5 +38,11 @@ export default class AuthService {
         return new Date().getTime() < expiresAt;
     }
 
-    //TODO:   getAccessToken() {...
+    getAccessToken() {
+        const accessToken = localStorage.getItem('access_token');
+        if(!accessToken) {
+            throw new Error('No acess token found');
+        }
+        return accessToken;
+    }
 }
