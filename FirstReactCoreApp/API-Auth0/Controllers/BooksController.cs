@@ -2,13 +2,22 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using API_Auth0.Domain.Model;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Extensions.Configuration;
 
 namespace API_Auth0.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     public class BooksController : Controller
     {
-        [HttpGet]
+        public BooksController(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+        public IConfiguration Configuration { get; }
+
+        [Authorize]
+        [HttpGet] 
         public IEnumerable<Book> Get() 
         {
             var currentUser = HttpContext.User;
@@ -20,6 +29,14 @@ namespace API_Auth0.Controllers
             };
 
             return resultBookList;
+        }
+
+        [HttpGet]
+        public ActionResult TestConfig(string key) {
+            string value = Configuration[key];
+            if(string.IsNullOrWhiteSpace(value))
+                value = "String Vazia";
+            return Ok(value);
         }
     }
 }

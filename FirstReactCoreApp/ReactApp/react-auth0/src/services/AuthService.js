@@ -12,7 +12,8 @@ export default class AuthService {
     });
 
     login() {
-        this.auth0.authorize();
+        if(!this.isAuthenticated())
+            this.auth0.authorize();
     }
 
     handleAuthentication(history) {
@@ -27,6 +28,7 @@ export default class AuthService {
     }
 
     setSession(authResult) {
+        console.log(authResult);
         let expiresAt = JSON.stringify((authResult.expiresIn * 1000) + new Date().getTime());
         localStorage.setItem('access_token', authResult.accessToken);
         localStorage.setItem('id_token', authResult.idToken);
@@ -34,6 +36,7 @@ export default class AuthService {
     }
 
     isAuthenticated() {
+        console.log("entrou no isAuthenticated");
         let expiresAt = JSON.parse(localStorage.getItem('expires_at'));
         return new Date().getTime() < expiresAt;
     }
@@ -41,7 +44,7 @@ export default class AuthService {
     getAccessToken() {
         const accessToken = localStorage.getItem('access_token');
         if(!accessToken) {
-            throw new Error('No acess token found');
+            throw new Error('No access token found');
         }
         return accessToken;
     }

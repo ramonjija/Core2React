@@ -9,18 +9,29 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace API_Auth0
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
-        {
+
+        // public Startup(IHostingEnvironment env, IConfiguration configuration)
+        // {
+        //     var builder = new ConfigurationBuilder()
+        //     .SetBasePath(env.ContentRootPath)
+        //     .AddJsonFile("appsettings.json", true)
+        //     // .AddJsonFile($"appsettings.{env.EnvironmentName}.json", true)
+        //     .AddEnvironmentVariables();
+
+        //     Configuration = builder.Build();
+        // }
+        public Startup(IConfiguration configuration) {
             Configuration = configuration;
         }
-
         public IConfiguration Configuration { get; }
-
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {

@@ -9,8 +9,8 @@ class Home extends React.Component {
 
     componentDidMount() {
         const accessToken = this.props.auth.getAccessToken();
-
-        fetch("/api/books", {headers: new Headers({
+        console.log(accessToken);
+        fetch("/api/books/get", {headers: new Headers({
             "Accept": "application/json",
             "Authorization": `Bearer ${accessToken}`
             })

@@ -23,7 +23,7 @@ class App extends Component {
   }
 
   startSession(history) {
-    console.log("Iniciando startSession");
+    console.log("startSession");
     this.authService.handleAuthentication(history);
     return <div><p>Starting session...</p></div>;
   }
